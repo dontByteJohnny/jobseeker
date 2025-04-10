@@ -33,7 +33,7 @@ public class JobController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size
     ) {
-        List<Job> localJobs = jobService.getJobs(filter);
+        List<Job> localJobs = jobService.getJobs();
         List<Job> externalJobs = externalJobService.fetchExternalJobs();
 
         List<Job> allJobs = new ArrayList<>();
